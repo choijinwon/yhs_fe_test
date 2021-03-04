@@ -1,19 +1,9 @@
-# test
+# 연합시스템 Front-End 과제
+## 다음 Vue Project를 내려받은 후 아래의 내용을 구현하세요
+* /src/views/Home.vue 파일 내에서 list 배열 내의 데이터를 활용하여 다양한 Chart & Graph를 만들어 보세요
+* 화면은 반응형으로 제작되어야 합니다.
+* 형식은 자유이며, 완성된 과제는 프로젝트 단위로 압축하여 shin.hyunjung@yhsbearing.com으로 전달 바랍니다.
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 데이터 설명
+당사에서 실제 제품가공한 데이터 수집내역 중 10개분 가공에 대한 데이터이며, UTC 02:47~04:48시의 데이터로 총 2시간 분량의 데이터를 조건에 맞추어 필터링한 것입니다.
+* MID : 기계명, Xact : X축 좌표값, Zact : Z축 좌표값, S1load : 스핀들 부하값, part_count : 가공갯수, TIME : 시간
