@@ -1,6 +1,6 @@
 <template>
   <div>
-    Chart is Here!
+    차트 
   </div>
 </template>
 
