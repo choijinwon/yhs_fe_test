@@ -14,4 +14,5 @@
   2. git clone  vscode 다운로드[v]
   3. npm i  node 다운로드 패킷[v]
   4. npm run serve 실행 확인[v]
-  5. 차트 사용하는거 고민중!!!
+  5. home.vue vfor 데이터 화면에 호출 [v]
+  6. 차트 사용하는거 고민중!!!

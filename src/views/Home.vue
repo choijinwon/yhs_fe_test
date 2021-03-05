@@ -1,7 +1,14 @@
 <template>
-  <div>
-    차트 
+<div>
+  <div v-for="(item,index) in list" :key="index">
+    <div v-for="(itemObject,index2) in item" :key="index2">
+      {{ itemObject }}
+    </div>
+
   </div>
+
+    
+</div>
 </template>
 
 <script>
@@ -15271,6 +15278,12 @@ export default {
         ]
       ]
     }
-  }
+  },
+    // methods:{
+
+    // },
+    // created(){
+   
+    // }
 }
 </script>
