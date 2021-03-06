@@ -1,25 +1,25 @@
 <template>
   <div>
-
+    <LineChart/>
   </div>
 </template>
 
 <script>
 import moment from "moment";
-// import LineChart from "../components/LineChart.vue"
+import LineChart from "../components/LineChart.vue"
 export default {
   name: 'Home',
-    // components: {
-    //     LineChart
-    // },
+    components: {
+        LineChart
+    },
     data() {
       return{
-        arrPositive: [],
-        arrHospitalized: [], 
-        arrOnVentilators: [],
-        arrInIcu: [],
-        arrRecovered: [],
-        arrDeaths: [],
+        arrMid: [],
+        arrXact: [], 
+        arrZact: [],
+        arrS1load: [],
+        arrPart_Count: [],
+        arrTime: [],
         list: [
           [
             {
@@ -15283,15 +15283,21 @@ export default {
       }
     },
     mounted(){},
+    methods: {
+      //버튼 
+      timeSerchBtn:function(){
+        let itemList =[...this.list[0]];
+        itemList.forEach(day => {    
+          //시간 UTC 형식 변환 
+          //형식 : 2021-03-04 03:25:59
+          const gmtDateTime = moment.utc(day.TIME).format('hh:mm');
+          console.log(gmtDateTime);
+        });
+      }
+    },
     created(){
-      let itemList =[...this.list[0]];
-      console.log(itemList);
-      itemList.forEach(day => {        
-        //시간 UTC 형식 변환 
-        //형식 : 2021-03-04 03:25:59
-        var gmtDateTime = moment.utc(day.TIME).format('YYYY-MM-DD hh:mm:ss');
-        console.log(gmtDateTime)
-      });
+
+
     }
               //    "MID": "Lynx220LSY",
               // "Xact": "332",
