@@ -1,6 +1,10 @@
 <template>
   <div>
-    <LineChart/>
+    <LineChart
+    :chartData="arrPart_Count"
+    :options="chartOptions"
+    label="Deaths"
+    />
   </div>
 </template>
 
@@ -15290,13 +15294,29 @@ export default {
         itemList.forEach(day => {    
           //시간 UTC 형식 변환 
           //형식 : 2021-03-04 03:25:59
-          const gmtDateTime = moment.utc(day.TIME).format('hh:mm');
+          const gmtDateTime = moment.utc(day.TIME).format('hh:ss');
           console.log(gmtDateTime);
         });
       }
     },
     created(){
+      let itemList =[...this.list[0]];
+        itemList.forEach(d => {    
+          //시간 UTC 형식 변환 
+          //형식 : 2021-03-04 03:25:59
+          const date = moment.utc(d.TIME).format('hh:mm');
+          const {
+            MID,
+            Xact,
+            Zact,
+            S1load,
+            part_count,
+            TIME
+          } = d;
 
+          this.arrPart_Count.push({date, total:part_count});
+          // console.log(gmtDateTime);
+        });
 
     }
               //    "MID": "Lynx220LSY",
